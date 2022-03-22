@@ -1,66 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Quiz Wiz</title>
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
-    <!-- Header with high scores and timer -->]
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <!-- Header with high scores and timer -->
     <header id="header">
-        <div id="navBar" class="navBar">
-            <h1 id="quizTitle">Coding Quiz Wiz</h1>
-        </div>
+      <div id="navBar" class="navBar">
+        <h1 id="quizTitle">Coding Quiz Wiz</h1>
+      </div>
 
-        <div id="gameScores">
-            <h2 id="viewHighScores" class="menuHyperLink">View High Scores</h2>
-            <h2 id="scoreTimer">Time: 60 Seconds</h2>
-        </div>
-
+      <div id="gameScores">
+        <h2 id="viewHighScores" class="menuHyperLink">View High Scores</h2>
+        <h2 id="scoreTimer">Time: 60 Seconds</h2>
+      </div>
     </header>
 
     <main class="main">
-        <!-- Website welcome message -->
-        <div id="welcomeScreen">
-            <h1 id="welcome">Welcome to Coding Quiz Wiz</h1>
-            <p id="welcomeMessage">Press button to start a new game</p>
-            <p>Answering correctly will add time to the clock</p>
-            <p>Answering incorrectly will subtract time to the clock</p>
-            <p>The time that is left will be your score</p>
-            <P>Good Luck and Have Fun!</P>
-        </div>
-    
-    <!-- Question Cars -->
-    <div id="questionCard">
+      <!-- Website welcome message -->
+      <div id="welcomeScreen">
+        <h1 id="welcome">Welcome to Coding Quiz Wiz</h1>
+        <p id="welcomeMessage">Press button to start a new game</p>
+        <p>Answering correctly will add time to the clock</p>
+        <p>Answering incorrectly will subtract time to the clock</p>
+        <p>The time that is left will be your score</p>
+        <p>Good Luck and Have Fun!</p>
+      </div>
+
+      <!-- Question Cars -->
+      <div id="questionCard">
         <div>
-            <h1 id="question">Questions</h1>
+          <h1 id="question">Questions</h1>
         </div>
         <div id="questionChoices">
-            <btn id="answerA" class="btn">A</btn>
-            <btn id="answerA" class="btn">B</btn>
-            <btn id="answerA" class="btn">C</btn>
-            <btn id="answerA" class="btn">D</btn>
+          <btn id="answerA" class="btn">A</btn>
+          <btn id="answerA" class="btn">B</btn>
+          <btn id="answerA" class="btn">C</btn>
+          <btn id="answerA" class="btn">D</btn>
         </div>
         <div>
-            <h3 id="correctOrIncorrect">Test</h3>
+          <h3 id="correctOrIncorrect">Test</h3>
         </div>
-    </div>
+      </div>
 
-    <!-- High Score Board -->
-    <div id="test">
-    <div id="container">
-        <div id="highScoresBoard">
+      <!-- High Score Board -->
+      <div id="test">
+        <div id="container">
+          <div id="highScoresBoard">
             <button id="closeWindow">X</button>
             <h2 id="highScoresTitle">High Scores</h2>
             <!-- High Score List -->
             <ol id="highScoreList"></ol>
+          </div>
         </div>
-    </div>
-    </div>
+      </div>
     </main>
 
     <script src="./assets/script.js"></script>
-</body>
+  </body>
 </html>
