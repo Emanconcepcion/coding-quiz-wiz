@@ -10,4 +10,4 @@ https://emanconcepcion.github.io/coding-quiz-wiz/
 
 ## Screenshot
 
-<img src="./assests/images/screenshot.png">
+<img src="./assests/code.png">
