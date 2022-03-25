@@ -15,7 +15,7 @@ var closeWindowEl = document.querySelector("#closeWindow");
 var containerEl = document.querySelector("#container");
 var highScoreListEl = document.querySelector("#highScoreList");
 
-//question bank object
+// Question List
 var questionBank = [
   {
     question: "What does HTML stand for?",
@@ -49,7 +49,7 @@ var questionBank = [
   },
 ];
 
-//displays questions and hides welcome screen after the start button is pressed
+// shows the questions and hides the home screen
 function startGame() {
   questionCardEl.style.display = "flex";
   welcomeScreenEl.style.display = "none";
@@ -170,7 +170,7 @@ answerDEl.addEventListener("click", function () {
   questionsDone();
 });
 
-//calls end of game functions after all the questions have been answered
+// calls the function to end game when all the questios are answered
 function questionsDone() {
   if (questionIndex > questionBank.length - 1) {
     endGame();
@@ -181,7 +181,7 @@ function questionsDone() {
   }
 }
 
-//hides question block and displays welcome message after the game is finished
+// it will the questions and will display home screen when the game is over
 function endGame() {
   setTimeout(() => {
     containerEl.style.display = "inline-block";
@@ -192,7 +192,7 @@ function endGame() {
   }, 500);
 }
 
-//records high score at the end of the game
+// records the high score when the game is done
 function listScore() {
   var score = (timerScoreEl.textContent = startTime);
   var newFinishedPlayer = document.createElement("li");
@@ -208,24 +208,22 @@ function listScore() {
       return;
     }
   }, 1000);
-  localStorage.setItem("score", JSON.stringify(highScoreListEl));
-  renderMessage();
-
-  highScoreListEl = JSON.parse(localStorage.getItem("score"));
+  localStorage.setItem("score", JSON.stringify(score));
+  var myData = localStorage.getItem("score");
 }
 
-//stops clock and displays Game Over message
+// end the clock and displays "Game Over" when done
 function endClock() {
   clearInterval(timerInterval);
   timerScoreEl.textContent = "Game Over";
 }
 
-//turns high scoreboard on
+// allows the high score board to be turned on
 viewHighScoresEl.addEventListener("click", function () {
   containerEl.style.display = "inline-block";
 });
 
-//closes high scoreboard
+// button the close the high score board
 closeWindowEl.addEventListener("click", function () {
   containerEl.style.display = "none";
 });
