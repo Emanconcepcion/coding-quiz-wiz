@@ -209,7 +209,6 @@ function listScore() {
     }
   }, 1000);
   localStorage.setItem("score", JSON.stringify(score));
-  var myData = localStorage.getItem("score");
 }
 
 // end the clock and displays "Game Over" when done
